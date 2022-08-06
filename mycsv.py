@@ -3,6 +3,13 @@ headerl:list = []
 process:list[list[str]] = []
 
 def dict_reader(content:bytes):
+    global headerd
+    global headerl
+    global process
+    headerd.clear()
+    headerl.clear()
+    process.clear()
+    # 初始化
     # 将字节序列转为字符串
     str_content:str = content.decode('UTF-8')
     # 去除回车符
